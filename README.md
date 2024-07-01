@@ -1,1 +1,1 @@
-# https-github.com-toarnabtrainer-AEC_Advanced_C_Batch_August_2024
+# AEC_Advanced_C_Batch_August_2024
