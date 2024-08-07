@@ -1,4 +1,6 @@
 #include <stdio.h>
+// global variables will suffer from 'side effet', which is due to the untraced and unauthorized
+// access of the global variables
 int num1, num2, total;   // global variables
 int main(void) {
 	void my_input(void);   // prototype declaration
