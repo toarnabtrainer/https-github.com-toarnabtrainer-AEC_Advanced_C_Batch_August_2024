@@ -5,6 +5,7 @@ int main(void) {
 	int my_input(void);   // prototype declaration
 	void my_welcome(void);
 	int my_addition(int, int);
+	void my_display(int, int, int);
 	
 	my_welcome();
 	
@@ -13,7 +14,7 @@ int main(void) {
 	
 	total = my_addition(num1, num2);
 	
-	printf("\n\nSo %d + %d = %d...", num1, num2, total);
+	my_display(num1, num2, total);
 	
 	printf("\n\nEnd of the program...");
 }
@@ -28,11 +29,12 @@ int my_input(void) {
 	
 	return number;
 }
-
 int my_addition(int n1, int n2) {
 	int sum;
 	printf("\nPerforming the addition operation...");
 	sum = n1 + n2;
 	return sum;
 }
-
+void my_display(int n1, int n2, int tt) {
+	printf("\nSo the sum of %d and %d is %d...", n1, n2, tt);
+}
