@@ -6,6 +6,7 @@ int main(void) {
 	void my_welcome(void);
 	int my_addition(int, int);
 	void my_display(int, int, int);
+	void my_quit(void);
 	
 	my_welcome();
 	
@@ -16,7 +17,7 @@ int main(void) {
 	
 	my_display(num1, num2, total);
 	
-	printf("\n\nEnd of the program...");
+	my_quit();
 }
 void my_welcome(void) {
 	printf("\nWelcome to the WORLD of Programming !!!");
@@ -37,4 +38,7 @@ int my_addition(int n1, int n2) {
 }
 void my_display(int n1, int n2, int tt) {
 	printf("\nSo the sum of %d and %d is %d...", n1, n2, tt);
+}
+void my_quit(void) {
+	printf("\n\nEnd of the program...");
 }
