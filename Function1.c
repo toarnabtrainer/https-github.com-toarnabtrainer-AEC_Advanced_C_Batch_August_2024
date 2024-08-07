@@ -35,8 +35,8 @@ int my_addition(int n1, int n2) {
 	sum = n1 + n2;
 	return sum;
 }
-void my_display(int n1, int n2, int tt) {
-	printf("\nSo the sum of %d and %d is %d...", n1, n2, tt);
+void my_display(int nn1, int nn2, int tt) {
+	printf("\nSo the sum of %d and %d is %d...", nn1, nn2, tt);
 }
 void my_quit(void) {
 	printf("\n\nEnd of the program...");

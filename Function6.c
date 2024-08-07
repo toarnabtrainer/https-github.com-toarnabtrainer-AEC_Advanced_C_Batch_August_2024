@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "stdio.h"
 #include "MyHeader.h"
 int main(void) {
 	int num1, num2, total;
