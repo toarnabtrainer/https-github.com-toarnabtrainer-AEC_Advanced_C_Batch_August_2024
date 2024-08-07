@@ -1,6 +1,5 @@
 #include <stdio.h>
 int main(void) {
-	int total;
 	int my_input1(void);   // prototype declaration
 	int my_input2(void);   // prototype declaration
 	void my_welcome(void);
@@ -10,9 +9,7 @@ int main(void) {
 	
 	my_welcome();
 	
-	total = my_addition(my_input1(), my_input2());
-	
-	my_display(total);
+	my_display(my_addition(my_input1(), my_input2()));
 	
 	my_quit();
 }
@@ -30,7 +27,7 @@ int my_input1(void) {
 int my_input2(void) {
 	int number;
 	
-	printf("\nPlease enter the second integerr number: ");
+	printf("\nPlease enter the second integer number: ");
 	scanf("%d", &number);
 	
 	return number;
