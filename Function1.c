@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int main(void) {
 	int num1, num2, total;
 	int my_input(void);   // prototype declaration
