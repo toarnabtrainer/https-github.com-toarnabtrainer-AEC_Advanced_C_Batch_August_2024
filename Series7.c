@@ -1,6 +1,6 @@
 /*
 index -> 1    2    3    4    5     6     7
-total =  1! + 3! + 5! + 7! + 9! + 11! + 13! + .... n terms
+total =  2! + 4! + 6! + 8! + 10! + 12! + 14! + .... n terms
 
   i   fact  next_fact factor
 ------------------------------
@@ -22,7 +22,7 @@ void main(void) {
 	for(i = 1; i <= n; i++) {
 		total = total + fact;
 		printf("\nSo current i = %d, term = %d and total = %d...", i, fact, total);
-		fact = fact * (2 * i) * (2 * i + 1);
+		fact = fact * (???) * (???);
 	}
 	
 	printf("\n\nSo the total for first %d terms is %d...", n, total);
