@@ -13,7 +13,7 @@ void main(void) {
 	total = 0;
 	
 	for(i = 1; i <= n; i++) {
-		term = (pow(-1, i) * i);
+		term = (pow(-1, i + 1) * i);
 		total = total + term;
 		printf("\nSo current i = %d, term = %d and total = %d...", i, term, total);
 	}
