@@ -9,19 +9,19 @@ What is the 99-th term of the series? (Do only logical calculations) - Answer is
 */
 
 #include <stdio.h>
-int main(int) {
+int main(void) {
 	int term, i, temp_sum, final_sum, n;
 	printf("\nPlease enter the number of terms: ");
 	scanf("%d", &n);
-	fs = 0; ts = 0; term = 1;
+	final_sum = 0; temp_sum = 0; term = 1;
 	for (i = 1; i <= n; i++) {
 		if (i % 5 == 0) {
 			final_sum += temp_sum;
-			printf("\nAdding temp_sum = %d...", temp_sum);
-			????
+			printf("\nFor i = %d, adding temp_sum = %d...", i, temp_sum);
+			temp_sum = 0;
 		} else {
 			final_sum += term;
-			printf("\nAdding term = %d...", term);
+			printf("\nFor i = %d, adding term = %d...", i, term);
 			temp_sum += term;
 			term ++;
 		}
