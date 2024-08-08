@@ -1,7 +1,6 @@
 /*
 n = 11 (OOD integer number as User Input) m = (n + 1) / 2 = 6
-
-
+                                           sp/ep => start/end positions
       1  2  3  4  5  6  7  8  9 10 11      row  sp  ep  (sp, ep are the col numbers)
 ----------------------------------------  ---------------
  1 |  1  1  1  1  1  1  1  1  1  1  1        1   1  11
@@ -16,6 +15,7 @@ n = 11 (OOD integer number as User Input) m = (n + 1) / 2 = 6
 10 |  1  2  2  2  2  2  2  2  2  2  1       10   2  10   ep => row
 11 |  1  1  1  1  1  1  1  1  1  1  1       11   1  11
 ----------------------------------------  ---------------
+                                           Tracing Table
 */
 #include <stdio.h>
 int main(void) {
