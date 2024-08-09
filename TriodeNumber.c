@@ -17,7 +17,8 @@ for num = 102 to 987
 		x = times * num
 		while (x != 0)
 			digit = x % 10
-			if (digit in a[10]) then ussuccessful and break
+			if (a[digit] != 0) then ussuccessful and break
+			else a[digit] = 1
 			digit = int(digit / 10)
 		end while
 		if (unsuccessful) then break
