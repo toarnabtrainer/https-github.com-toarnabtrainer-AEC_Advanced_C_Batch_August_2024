@@ -19,7 +19,7 @@ for num = 102 to 987
 			digit = x % 10
 			if (a[digit] != 0) then ussuccessful and break
 			else a[digit] = 1
-			digit = int(digit / 10)
+			x = int(x / 10)
 		end while
 		if (unsuccessful) then break
 	end for
