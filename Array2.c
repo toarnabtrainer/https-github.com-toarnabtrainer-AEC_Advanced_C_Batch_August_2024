@@ -1,4 +1,4 @@
-
+/*
 n = 5
        ------ col---------
        0   1   2   3   4
@@ -20,7 +20,7 @@ int main(void) {
 	printf("\nFilling up the array with data...");
 	for(row = 0; row < n; row++) {
 		for(col = 0; col < n; col++) {
-			arr[row][col] = ???      // (row * n) + 1 + col;
+			arr[row][col] = (col * n) + 1 + row;
 		}
 	}	
 	printf("\n\nDisplaying the content of the array...\n");
