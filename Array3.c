@@ -22,10 +22,8 @@ int main(void) {
 	}
 	printf("\nFilling up the array with data...");
 	for(row = 0; row < n; row++) {
-		for(col = 0; col < n; col++) {
-			if (row == col) arr[row][col] = 10;
-			if (row + col == n - 1) arr[row][col] += 20;
-		}
+		arr[row][row] = 10;
+		arr[row][n - row - 1] += 20;
 	}	
 	printf("\n\nDisplaying the content of the array...\n");
 	for(row = 0; row < n; row++) {
