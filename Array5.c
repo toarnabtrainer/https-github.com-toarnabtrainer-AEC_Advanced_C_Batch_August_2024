@@ -44,8 +44,15 @@ int main(void) {
 			else if (arr[row][n + 2] > arr[row][col]) arr[row][n + 2] = arr[row][col];
 			if (row == 0) arr[n + 2][col] = arr[row][col];  // col wise min
 			else if (arr[n + 2][col] > arr[row][col]) arr[n + 2][col] = arr[row][col];
+			
+			if (col == n - 1) arr[row][n + 3] = arr[row][n] / n;
+			if (row == n - 1) arr[n + 3][col] = arr[n][col] / n;
 		}
-	}	
+	}
+	
+	// for(row = 0; row < n; row++) arr[row][n + 3] = arr[row][n] / n;   // row wise average
+	// for(col = 0; col < n; col++) arr[n + 3][col] = arr[n][col] / n;   // col wise average
+	
 	printf("\n\nDisplaying the content of the array...\n");
 	for(row = 0; row < n + 4; row++) {
 		for(col = 0; col < n + 4; col++) {
