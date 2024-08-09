@@ -1,4 +1,4 @@
-Find out all possible such numbers which when multiply by 3 then in the product
+Find out all possible such numbers which when multiplied by 3 then in the product
 the first digit of the source number will come at the last and all other digits
 in the product will maintain the same sequence as they were in the source number.
 
@@ -13,4 +13,9 @@ As example:
 	                y ... zx
 	                
 Find out all possible such numbers.
+                     1 0 2 1 2
+                     1 4 2 8 5 7
+                             * 3
+                    ------------
+                     4 2 8 5 7 1
 --------------------------------------------------------------------------------
