@@ -20,5 +20,10 @@
 
 ![image](https://github.com/user-attachments/assets/ba006c60-e0b3-44b4-ae4b-f2e63f0a5881)
 
+<hr>
+
+## Towards Growth and Towards Success
+
+![image](https://github.com/user-attachments/assets/f9ef8ebf-343e-4008-88d0-70f9415f4bd2)
 
 <hr>
