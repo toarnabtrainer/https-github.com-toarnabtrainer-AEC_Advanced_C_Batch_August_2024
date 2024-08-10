@@ -1,17 +1,25 @@
 #include <stdio.h>
 int main(void) {
 	int arr[10];
-	int i;
+	void array_initialize(int []);
+	void array_display(int []);
 	
+	array_initialize(arr);
+	array_display(arr);
+
+	printf("\n\nEnd of the program...");
+}
+void array_initialize(int arr1[]) {
+	int i;
 	printf("\n\nInitializing the content of the array...");
 	for(i = 0; i < 10; i++) {
-		arr[i] = (i + 1) * 100 + 5;
+		arr1[i] = (i + 1) * 100 + 5;
 	}
-
+}
+void array_display(int arr2[]) {
+	int j;
 	printf("\n\nDisplaying the content of the array...");
-	for(i = 0; i < 10; i++) {
-		printf("\nLocation Number %d and content = %d...", i, arr[i]);
+	for(j = 0; j < 10; j++) {
+		printf("\nLocation Number %d and content = %d...", j, arr2[j]);
 	}
-	
-	printf("\n\nEnd of the program...");
 }
