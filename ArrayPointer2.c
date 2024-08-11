@@ -5,14 +5,14 @@ int main(void) {
 	int arr_menu(void);
 	void arr_create(int [], int *, int);
 	void arr_insert(int [], int *, int);
-	void arr_delete(void);
+	void arr_delete(int [], int *);
 	void arr_update(void);
 	void arr_search(void);
 	void arr_sort(void);
 	void arr_display(const int [], int, int);
 	void arr_exit(void);
 	
-	choice = 0; maxloc = 10;
+	choice = 0; maxloc = 10; n = 0;
 	while (choice != 8) {
 		choice = arr_menu();
 		switch(choice) {
@@ -23,7 +23,7 @@ int main(void) {
 				arr_insert(arr, &n, maxloc);
 				break;
 			case 3:        // DELETE Operation
-				arr_delete();
+				arr_delete(arr, &n);
 				break;
 			case 4:        // UPDATE Operation
 				arr_update();
@@ -113,9 +113,35 @@ void arr_insert(int a[], int *nn, int maxl) {
 	}
 	printf("\n\nINSERT Operation has been completed successfully...");
 }
-void arr_delete(void) {
+/*
+n = 8, maxloc = 10, loc = 2, old_item = 54
+  index :  0   1   2   3   4   5   6   7   8   9
+   data : 23  16  54  87  50  81  27  98
+                   ^
+                   |
+              old_item = 54
+   target place  <----  Source place     
+   2 to 6               3 to 7
+   loc to (n - 2)       (loc + 1) to (n - 1)
+*/
+void arr_delete(int a[], int *nn) {
+	int i, old_item, loc;
 	printf("\n\nDELETE Operation has been selected...");
-	
+	if (*nn == 0) {
+		printf("\n\nU N D E R F L O W !!!");
+		printf("\nNo data remains for deletion operation...");
+	} else {
+		printf("\nData are present for deletion operation...");
+		printf("\n\nPlease enter the location index for deletion: ");
+		scanf("%d", &loc);
+		old_item = a[loc];
+		for(i = loc; i <= (*nn - 2); i++) {   // i is the target index
+			a[i] = a[i + 1];
+		}
+		printf("\nSo data item %d got deleted from the location %d...", old_item, loc);
+		
+		(*nn)--;
+	}
 	printf("\n\nDELETE Operation has been completed successfully...");
 }
 void arr_update(void) {
