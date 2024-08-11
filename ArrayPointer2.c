@@ -8,7 +8,7 @@ int main(void) {
 	void arr_delete(int [], int *);
 	void arr_update(int [], int);
 	void arr_search(const int [], int);
-	void arr_sort(void);
+	void arr_sort(int [], int);
 	void arr_display(const int [], int, int);
 	void arr_exit(void);
 	
@@ -32,7 +32,7 @@ int main(void) {
 				arr_search(arr, n);
 				break;
 			case 6:        // SORT Operation
-				arr_sort();
+				arr_sort(arr, n);
 				break;
 			case 7:        // DISPLAY Operation
 				arr_display(arr, n, maxloc);
@@ -187,7 +187,7 @@ void arr_search(const int a[], int nn) {
 	
 	printf("\n\nSEARCH Operation has been completed successfully...");
 }
-/
+/*
 Algorithm for Bubble Sort:
 --------------------------
 A) When index starts from 1
@@ -202,11 +202,21 @@ B) When index starts from 0
    			if (a[j - 1] > a[j]) then swap a[j - 1], a[j]  // for ascending order
    		end for
    	end for
-*/ 	
+*/
    	
-void arr_sort(void) {
+void arr_sort(int a[], int nn) {
+	int i, j, temp;
 	printf("\n\nSORT Operation has been selected...");
-	
+	printf("\nSorting array elements in the ascending order using BUBBLE Sort algorithm...");
+   	for (i = 1; i <= (nn - 1); i++) {
+   		for(j = 1; j <= (nn - i); j++) {
+   			if (a[j - 1] > a[j]) {
+			   temp = a[j - 1];
+			   a[j - 1] = a[j];
+			   a[j] = temp;
+			}
+   		}
+   	}
 	printf("\n\nSORT Operation has been completed successfully...");
 }
 void arr_display(const int a[], int nn, int maxl) {
