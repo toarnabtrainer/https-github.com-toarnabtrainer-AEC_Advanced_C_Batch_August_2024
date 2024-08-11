@@ -68,8 +68,12 @@ void arr_create(int a[], int *nn, int maxl) {
 	int i;
 	
 	printf("\n\nCREATE Operation has been selected...");
-	printf("\nPlease enter number of locations (<= %d): ", maxl);
-	scanf("%d", nn);
+	while (1) {
+		printf("\nPlease enter number of locations (<= %d): ", maxl);
+		scanf("%d", nn);
+		if (*nn >= 1 && *nn <= maxl) break;
+		else printf("\nYour input is not valid...!!!");
+	}
 	
 	for (i = 0; i < *nn; i++) {
 		printf("Enter data for location number %d: ", i);
@@ -93,7 +97,7 @@ void arr_insert(int a[], int *nn, int maxl) {
 	printf("\n\nINSERT Operation has been selected...");
 	if (*nn == maxl) {
 		printf("\nO V E R F L O W !!!");
-		printf("\nno space for insertion...");
+		printf("\nNo space for insertion...");
 	} else {
 		printf("\nThere are some space for insert operation...");
 		printf("\nPlease enter the location index for insertion: ");
