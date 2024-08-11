@@ -7,7 +7,7 @@ int main(void) {
 	void arr_insert(int [], int *, int);
 	void arr_delete(int [], int *);
 	void arr_update(void);
-	void arr_search(void);
+	void arr_search(const int [], int);
 	void arr_sort(void);
 	void arr_display(const int [], int, int);
 	void arr_exit(void);
@@ -29,7 +29,7 @@ int main(void) {
 				arr_update();
 				break;
 			case 5:        // SEARCH Operation
-				arr_search();
+				arr_search(arr, n);
 				break;
 			case 6:        // SORT Operation
 				arr_sort();
@@ -149,8 +149,27 @@ void arr_update(void) {
 	
 	printf("\n\nUPDATE Operation has been completed successfully...");
 }
-void arr_search(void) {
+void arr_search(const int a[], int nn) {
+	int i, search_item;
 	printf("\n\nSEARCH Operation has been selected...");
+	if (nn == 0) {
+		printf("\n\nThe array has got no data...");
+		printf("\nSearching of data items is not possible...");
+	} else {
+		printf("\n\nPlease enter the search item: ");
+		scanf("%d", &search_item);
+		for(i = 0; i < nn; i ++) {
+			if (a[i] == search_item) {
+				printf("\nSUCCESSFUL Searching...!!!");
+				printf("\nSo %d has been found at the index %d...", search_item, i);
+				break;
+			}
+		}
+		if (i == nn) {
+			printf("\nUNSUCCESSFUL Searching...!!!");
+			printf("\n%d has not been found in the array...", search_item);
+		}
+	}
 	
 	printf("\n\nSEARCH Operation has been completed successfully...");
 }
