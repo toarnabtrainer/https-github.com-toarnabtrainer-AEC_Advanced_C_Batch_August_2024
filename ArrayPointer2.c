@@ -6,7 +6,7 @@ int main(void) {
 	void arr_create(int [], int *, int);
 	void arr_insert(int [], int *, int);
 	void arr_delete(int [], int *);
-	void arr_update(void);
+	void arr_update(int [], int);
 	void arr_search(const int [], int);
 	void arr_sort(void);
 	void arr_display(const int [], int, int);
@@ -26,7 +26,7 @@ int main(void) {
 				arr_delete(arr, &n);
 				break;
 			case 4:        // UPDATE Operation
-				arr_update();
+				arr_update(arr, n);
 				break;
 			case 5:        // SEARCH Operation
 				arr_search(arr, n);
@@ -144,9 +144,23 @@ void arr_delete(int a[], int *nn) {
 	}
 	printf("\n\nDELETE Operation has been completed successfully...");
 }
-void arr_update(void) {
+void arr_update(int a[], int nn) {
+	int new_item, loc;
 	printf("\n\nUPDATE Operation has been selected...");
-	
+	if (nn == 0) {
+		printf("\n\nNo data is pre-existing...");
+		printf("\nUpdate operation can not be carried out...");
+	} else {
+		while (1) {
+			printf("\n\nPlease enter the location number (Between 0 to %d): ", (nn - 1));
+			scanf("%d", &loc);
+			if (loc >= 0 && loc < nn) break;
+		}
+		printf("\n\nPlease enter new item: ");
+		scanf("%d", &new_item);
+		printf("\nSo old data %d found at index %d updated by new data %d...", a[loc], loc, new_item);
+		a[loc] = new_item;
+	}
 	printf("\n\nUPDATE Operation has been completed successfully...");
 }
 void arr_search(const int a[], int nn) {
@@ -173,6 +187,23 @@ void arr_search(const int a[], int nn) {
 	
 	printf("\n\nSEARCH Operation has been completed successfully...");
 }
+/
+Algorithm for Bubble Sort:
+--------------------------
+A) When index starts from 1
+	for i = 1 to (n - 1)
+   		for j = 1 to (n - i)
+   			if (a[j] > a[j + 1]) then swap a[j], a[j + 1]  // for ascending order
+   		end for
+   	end for
+B) When index starts from 0
+	for i = 1 to (n - 1)
+   		for j = 1 to (n - i)
+   			if (a[j - 1] > a[j]) then swap a[j - 1], a[j]  // for ascending order
+   		end for
+   	end for
+*/ 	
+   	
 void arr_sort(void) {
 	printf("\n\nSORT Operation has been selected...");
 	
