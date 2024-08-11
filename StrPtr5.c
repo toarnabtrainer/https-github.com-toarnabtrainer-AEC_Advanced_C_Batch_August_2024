@@ -23,7 +23,8 @@ int main(void) {
 void person_initialize(struct person *pp) {
 	printf("\nInitializing with user inputs...");
 	printf("\nPlease enter the age of the person: ");
-	scanf("%d", &pp->age);
+	// scanf("%d", &pp->age);   // -> operator denotes implies
+	scanf("%d", &(*pp).age);
 	printf("Please enetr the salary of the person: ");
 	scanf("%d", &pp->sal);
 	printf("Please enter date of joining: ");
