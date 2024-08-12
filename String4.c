@@ -14,16 +14,23 @@ int main(void) {
 	int my_strcmp(char *, char *);
 	
 	word1 = "Amit"; word2 = "Amit";
-	printf("\nStrings are %s and %s and differene is %d...", word1, word2, strcmp(word1, word2));
+	printf("\nStrings are %s and %s and differene is %d and %d...",
+							word1, word2, strcmp(word1, word2), my_strcmp(word1, word2));
 	word1 = "Amit"; word2 = "Amitava";
-	printf("\nStrings are %s and %s and differene is %d...", word1, word2, strcmp(word1, word2));
+	printf("\nStrings are %s and %s and differene is %d and %d...",
+							word1, word2, strcmp(word1, word2), my_strcmp(word1, word2));
 	word1 = "Amit"; word2 = "amit";
-	printf("\nStrings are %s and %s and differene is %d...", word1, word2, strcmp(word1, word2));
+	printf("\nStrings are %s and %s and differene is %d and %d...",
+							word1, word2, strcmp(word1, word2), my_strcmp(word1, word2));
 	word1 = "amit"; word2 = "Amit";
-	printf("\nStrings are %s and %s and differene is %d...", word1, word2, strcmp(word1, word2));
+	printf("\nStrings are %s and %s and differene is %d and %d...",
+							word1, word2, strcmp(word1, word2), my_strcmp(word1, word2));
 	word1 = "Amit"; word2 = "bimal";
-	printf("\nStrings are %s and %s and differene is %d...", word1, word2, strcmp(word1, word2));
-	
+	printf("\nStrings are %s and %s and differene is %d and %d...",
+							word1, word2, strcmp(word1, word2), my_strcmp(word1, word2));
+	word1 = "Amit"; word2 = "b";
+	printf("\nStrings are %s and %s and differene is %d and %d...",
+							word1, word2, strcmp(word1, word2), my_strcmp(word1, word2));
 	
 	printf("\n\nEnd of the program...");
 }
