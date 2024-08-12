@@ -14,7 +14,21 @@
 ## Class Assignment:
 
 <pre>
-.
+  
+LeetCode Problem Number - 136. Single Number
+Solution - 1 (1086 ms)
+int singleNumber(int* nums, int numsSize) {
+    int count, i, j;
+    for (i = 0; i < numsSize; i++) {
+        count = 0;
+        for (j = 0; j < numsSize; j++) {
+            if (nums[i] == nums[j]) count++;
+        }
+        if (count == 1) return nums[i];
+    }
+    return 0;
+}
+                    
 </pre>
 
 <hr>
