@@ -37,6 +37,21 @@ int singleNumber(int* nums, int numsSize) {
     }
     return output;
 }
+
+258. Add Digits (0 ms)
+int addDigits(int num) {
+    int digit, total = 0;
+    while (num != 0) {
+        digit = num % 10;
+        total += digit;
+        num /= 10;
+        if (num == 0 && total > 9) {
+            num = total;
+            total = 0;
+        }
+    }
+    return total;
+}
 </pre>
 
 <hr>
