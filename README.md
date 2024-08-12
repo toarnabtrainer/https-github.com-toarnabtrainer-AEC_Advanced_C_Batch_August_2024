@@ -11,6 +11,13 @@
 
 <hr>
 
+## YouTube Tutorial Links (Tutorialspoint):
+* **Data Structure:** https://www.youtube.com/watch?v=GzZTjaoRaOk&list=PLWPirh4EWFpG49yASGCmvOwXwVvgnm6Jt <br>
+* **Analysis of Algorithm:** https://www.youtube.com/watch?v=0J3C7xiiKE4&list=PLWPirh4EWFpFl2kIaopJOlKH2PULvpRIM
+* **Computer Organization and Architecture:** https://www.youtube.com/watch?v=Iir5Pz3kq0w&list=PLWPirh4EWFpF0FVeBgL75d1RlASn4sGoz
+
+<hr>
+
 ## Solving Problems from Leetcode (https://leetcode.com/):
 
 <pre>
