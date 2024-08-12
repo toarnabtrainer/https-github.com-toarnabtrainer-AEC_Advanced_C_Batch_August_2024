@@ -15,7 +15,11 @@ int main(void) {
 	printf("\n\nEnd of the program...");
 }
 int my_strlen(char *my_str) {
-	....
+	int i = 0;
+	while (my_str[i] != '\x0') {
+		i++;
+	}
+	return i;
 }
 void str_display(char *my_str) {
 	int i = 0;
