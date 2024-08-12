@@ -11,10 +11,9 @@
 
 <hr>
 
-## Class Assignment:
+## Solving Problems from Leetcode (https://leetcode.com/):
 
 <pre>
-  
 LeetCode Problem Number - 136. Single Number
 Solution - 1 (1086 ms)
 int singleNumber(int* nums, int numsSize) {
@@ -37,7 +36,9 @@ int singleNumber(int* nums, int numsSize) {
     }
     return output;
 }
+</pre>
 
+<pre>
 258. Add Digits (0 ms)
 int addDigits(int num) {
     int digit, total = 0;
@@ -54,6 +55,29 @@ int addDigits(int num) {
 }
 </pre>
 
+<hr>
+
+## Class Assignments:
+
+<pre>
+Assignment 1: Merge two sorted arrays.
+For Example:
+    arr1 = [11 33 77 99]
+    arr2 = [22, 44, 66, 77, 88, 99]
+    output_array = [11, 22, 33, 44, 66, 77, 77, 88, 99, 99]
+
+Assignment 2: Remove Duplicates from a Sorted Array.
+For Example:
+    arr1 = [11, 22, 33, 44, 66, 77, 77, 88, 99, 99]
+    output_array = [11, 22, 33, 44, 66, 77, 88, 99]
+
+Assignment 3: Validation of a string with ( and ) parentheses.
+For Example:
+    input_string: (()())   outcome: valid
+    input_string: ((())    outcome: invalid
+    input_string: )(())    outcome: invalid
+    input_string: )))(((   outcome: invalid
+</pre>
 <hr>
 
 ![image](https://github.com/user-attachments/assets/ba006c60-e0b3-44b4-ae4b-f2e63f0a5881)
