@@ -28,7 +28,15 @@ int singleNumber(int* nums, int numsSize) {
     }
     return 0;
 }
-                    
+
+Solution - 2 (11 ms)
+int singleNumber(int* nums, int numsSize) {
+    int output = 0, i, j;
+    for (i = 0; i < numsSize; i++) {
+        output ^= nums[i];
+    }
+    return output;
+}
 </pre>
 
 <hr>
