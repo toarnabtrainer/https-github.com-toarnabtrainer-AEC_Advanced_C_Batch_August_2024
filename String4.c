@@ -35,7 +35,13 @@ int main(void) {
 	printf("\n\nEnd of the program...");
 }
 int my_strcmp(char *wrd1, char *wrd2) {
-	//....
+	int diff, i = -1;
+	do {
+		i++;
+		diff = wrd1[i] - wrd2[i];
+		if (diff != 0) return (diff < 0)? -1: 1;
+	} while (wrd1[i] != '\x0' && wrd2[i] != '\x0');
+	
 	return 0;
 }
 int my_strlen(const char *my_str) {
