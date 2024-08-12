@@ -42,8 +42,11 @@ int my_strcmpi(char *wrd1, char *wrd2) {
 	int diff, i = -1;
 	do {
 		i++;
-		diff = wrd1[i] - wrd2[i];
-		if (diff != 0) return (diff < 0)? -1: 1;
+		diff = toupper(wrd1[i]) - toupper(wrd2[i]);
+		if (diff != 0) {
+			if (wrd1[i] == '\x0' || wrd2[i] == '\x0') return wrd1[i] - wrd2[i];
+			return (diff < 0)? -1: 1;
+		}
 	} while (wrd1[i] != '\x0' && wrd2[i] != '\x0');
 	
 	return 0;
